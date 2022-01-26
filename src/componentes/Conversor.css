@@ -1,14 +1,87 @@
-.Conversor{
-    padding: 10px;
+.container-conversor{
+
     margin: 10px;
-    border-radius: 10px;
-    border: solid 1px #0455BF;
+    width: 600px;
+    height: 400px;  
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.Conversor{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 300px;
-    box-shadow:  1px 5px 5px  #0455BF;;
-    background-color: #8FBDD9
+    justify-content: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-left: 200px;
 }
 
+.Moeda{
+    color: #9ba0a1;
+    font-size: 25px;
+    margin: 0;
+}
+.Title-moeda{
+    color: #fff;
+    font-size: 40px
+}
+.Conversor-input{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 200px;
+}
+.Conversor-input .MoedaA{
+    margin-bottom:10px;
+    display: flex;
+}
+.Conversor-input .MoedaA .number-moedaa{
+    background-color:#202124;
+    color: #9ba0a1;
+    border: solid 1px #9ba0a1;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+.Conversor-input .MoedaA .select-moeda{
+    background-color:#202124;
+    color: #9ba0a1;
+    border: solid 1px #9ba0a1;
+    border-radius: 5px;
+    height: 35px;
+    width: 150px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.Conversor-input .MoedaB{
+    margin-bottom:10px;
+    display: flex;
+}
+.Conversor-input .MoedaB .number-moedaa{
+    background-color:#202124;
+    color: #9ba0a1;
+    border: solid 1px #9ba0a1;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+}
+.select-moedaa{
+    background-color:#202124;
+    color: #9ba0a1;
+    border: solid 1px #9ba0a1;
+    border-radius: 5px;
+    height: 35px;
+    width: 150px;
+    padding: 10px;
+    margin-left: 20px;
+}
+.select-moedaa:focus{
+    outline: 1px solid white;
+}
+input:focus{
+    outline: 1px solid white;
+
+}
