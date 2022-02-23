@@ -7,7 +7,7 @@ class Conversor extends Component {
         super(props)
         this.state = {
             MoedaA_valor: "",
-            MoedaB_valor: 0,
+            MoedaB_valor: "",
             cotacao: 0
         }
         this.converter = this.converter.bind(this);
@@ -38,13 +38,15 @@ class Conversor extends Component {
         return(
             <div className="container-conversor">
                 <div className="Conversor">
-                    <p className="Moeda"> 1 {this.props.MoedaA} igual a  </p>
-                    <h1 className="Title-moeda">{parseFloat(this.state.cotacao).toFixed(2)} {this.props.MoedaB}</h1>
+                    <p className="Moeda"> 1 {this.state.MoedaA_valor} igual a  </p>
+                    <h1 className="Title-moeda">{parseFloat(this.state.cotacao).toFixed(2)} {this.state.MoedaB_valor}</h1>
                 </div>
                 <div className="Conversor-input">
                     <div className="MoedaA">
                         <input className="number-moedaa"></input>
-                        <select className="select-moedaa">
+                        <select className="select-moedaa" onChange={ValueSelect => {
+                            this.setState({MoedaA_valor: ValueSelect.target.value })
+                         }}>
                             <option value="AFN">Afghani do Afeganistão</option>   
                             <option value="MGA">Ariary Madagascarense</option>   
                             <option value="THB">Baht Tailandês</option>   
@@ -202,7 +204,7 @@ class Conversor extends Component {
                     </div>
                     <div className="MoedaB">
                         <input className="number-moedaa"></input>
-                        <select className="select-moedaa">
+                        <select className="select-moedaa" onChange={ValueMoedaB => this.setState( {MoedaB_valor: ValueMoedaB.target.value})}>
                         <option value="AFN">Afghani do Afeganistão</option>   
                             <option value="MGA">Ariary Madagascarense</option>   
                             <option value="THB">Baht Tailandês</option>   
@@ -359,6 +361,7 @@ class Conversor extends Component {
                         </select>
                     </div>
                 </div>
+                
             </div>
         )
     }
